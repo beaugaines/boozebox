@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Boozebox::Application.config.secret_key_base = '5b9deeced39a84c384107b48c75c4414015cf1d72d545c61c836b8abba36e3cb9e424f384e157736304726376df6bf2b65f6394e652b1b2f270426d6d8d427d2'
+Boozebox::Application.config.secret_key_base = ENV['APP_SECRET_TOKEN'] || '5324f6b3afa0ca7396341a99c77aaacb1f5994e3c829ad545275b039a9f47cd27694392b0c8b4a312bfc9b0bcb5818d38d17d44f2bc07b06da0164f576c9f774'

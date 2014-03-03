@@ -1,6 +1,9 @@
 Boozebox::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # staging and production use same db
+  ENV["DATABASE_URL"] = ENV["HEROKU_DB_URL"] 
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
