@@ -18,7 +18,7 @@ Boozebox::Application.configure do
   )
 
   # config rack-cache to use memcachier
-  config.action_dispatch.rach_cache = {
+  config.action_dispatch.rack_cache = {
     metastore:    client,
     entitystore:  client
   }
