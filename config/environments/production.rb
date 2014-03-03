@@ -11,10 +11,12 @@ Boozebox::Application.configure do
   config.static_cache_control = "public, max­age=31536000"
 
   # dalli for cache store
-  config.cache_store = Dalli::Client.new(
+  config.cache_store = :dalli_store
+
+  client = Dalli::Client.new(
     ENV['MEMCACHIER_SERVERS'],
     value_max_bytes: 10485760,
-    expires_in: 1.day
+    expires_in: 86400
   )
 
   # config rack-cache to use memcachier
