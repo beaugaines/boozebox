@@ -9,6 +9,7 @@
 
 # Ignore application configuration
 /config/application.yml
+/config/database.yml
 /.bundle
 /*.sublime*
 /log/*.log
