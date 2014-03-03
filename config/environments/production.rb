@@ -8,7 +8,7 @@ Boozebox::Application.configure do
   config.serve_static_assets = true
 
   # set static assets cache header
-  config.static_cache_control  =  "public, max­age=31536000"
+  config.static_cache_control = "public, max­age=31536000"
 
   # dalli for cache store
   config.cache_store = Dalli::Client.new(
