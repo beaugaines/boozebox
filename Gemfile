@@ -34,6 +34,7 @@ group :development do
   gem "meta_request"
   gem "quiet_assets"
   gem "ffaker"
+  gem "thin"
 end
 
 group :development, :test do
