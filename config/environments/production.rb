@@ -11,7 +11,17 @@ Boozebox::Application.configure do
   config.static_cache_control  =  "public, max­age=31536000"
 
   # dalli for cache store
-  config.cache_store =
+  config.cache_store = Dalli::Client.new(
+    ENV['MEMCACHIER_SERVERS'],
+    value_max_bytes: 10485760,
+    expires_in: 1.day
+  )
+
+  # config rack-cache to use memcachier
+  config.action_dispatch.rach_cache = {
+    metastore:    client,
+    entitystore:  client
+  }
 
   # Code is not reloaded between requests.
   config.cache_classes = true
