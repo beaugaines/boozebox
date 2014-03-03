@@ -26,6 +26,11 @@ gem "pundit"
 gem "figaro"
 gem "gravtastic"
 
+gem 'rack-cache'
+gem 'memcachier'
+gem 'dalli'
+gem 'kgio'
+
 group :development do
   gem "pry-rails"
   gem "better_errors"

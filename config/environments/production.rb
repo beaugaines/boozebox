@@ -4,6 +4,15 @@ Boozebox::Application.configure do
   # staging and production use same db
   ENV["DATABASE_URL"] = ENV["HEROKU_DB_URL"] 
 
+  # enable static assets on heroku
+  config.serve_static_assets = true
+
+  # set static assets cache header
+  config.static_cache_control  =  "public, max­age=31536000"
+
+  # dalli for cache store
+  config.cache_store =
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
