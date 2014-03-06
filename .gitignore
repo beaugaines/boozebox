@@ -21,3 +21,4 @@ doc/
 .idea
 .secret
 .DS_Store
+.ruby-gemset
